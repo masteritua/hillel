@@ -1,0 +1,4 @@
+pip install flask
+pip install Faker
+pip install essential_generators
+pip install requests
