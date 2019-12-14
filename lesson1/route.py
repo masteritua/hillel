@@ -6,6 +6,7 @@ import requests
 
 app = Flask('app')
 
+
 @app.route("/fake-data")
 def fake_data():
     gen = DocumentGenerator()
