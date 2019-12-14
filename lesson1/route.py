@@ -6,7 +6,7 @@ import requests
 app = Flask('app')
 
 @app.route("/requirements-read")
-def pull_request():
+def requirements_read():
     f = open('requirements.txt')
     return f.read()
 
