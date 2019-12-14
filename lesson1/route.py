@@ -5,7 +5,7 @@ import requests
 
 app = Flask('app')
 
-@app.route("/pull-request")
+@app.route("/requirements-read")
 def pull_request():
     f = open('requirements.txt')
     return f.read()
