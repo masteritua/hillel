@@ -3,8 +3,12 @@ from faker import Faker
 from essential_generators import DocumentGenerator
 import requests
 
-
 app = Flask('app')
+
+@app.route("/pull-request")
+def pull_request():
+    f = open('requirements.txt')
+    return f.read()
 
 
 @app.route("/fake-data")
