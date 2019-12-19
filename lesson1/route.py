@@ -7,8 +7,8 @@ app = Flask('app')
 
 @app.route("/requirements-read")
 def requirements_read():
-    f = open('requirements.txt')
-    return f.read()
+    with open('requirements.txt') as f:
+        return f.read()
 
 
 @app.route("/fake-data")
@@ -20,9 +20,9 @@ def fake_data():
 
 @app.route("/hw")
 def hw():
-    f = open('hw.csv')
-    content = f.read()
-    content = content.split('\n')[1:]
+    with open('hw.csv') as f:
+        content = f.read()
+        content = content.split('\n')[1:]
 
     height = []
     weight = []
