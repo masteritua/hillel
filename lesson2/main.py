@@ -1,7 +1,8 @@
 from flask import Flask
 from flask import request
 import sqlite3
-
+import random
+import string
 
 def connect(query):
     conn = sqlite3.connect("chinook.db")
@@ -15,8 +16,6 @@ app = Flask('app')
 
 @app.route("/generate")
 def generate():  # Генерирование случайный чисел
-    import random
-    import string
     return ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for n in range(10)])
 
 
